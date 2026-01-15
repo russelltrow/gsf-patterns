@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-catalog/architecture/right-hardware-type" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.9.2">
+<title data-rh="true">Select the right hardware/VM instance types for AI/ML training | Green Software Patterns</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" property="og:url" content="https://russelltrow.github.io/gsf-patterns/catalog/architecture/right-hardware-type"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="twitter:card" content="summary"><meta data-rh="true" name="twitter:site" content="@gsfcommunity"><meta data-rh="true" name="twitter:title" content="Green Software Patterns"><meta data-rh="true" name="twitter:description" content="An online open-source database of green software patterns reviewed and curated by the Green Software Foundation"><meta data-rh="true" name="twitter:image" content="https://patterns.greensoftware.foundation/img/og-image.png"><meta data-rh="true" name="twitter:creator" content="@gsfcommunity"><meta data-rh="true" name="og:title" content="Green Software Patterns"><meta data-rh="true" name="og:description" content="An online open-source database of green software patterns reviewed and curated by the Green Software Foundation"><meta data-rh="true" name="og:image" content="https://patterns.greensoftware.foundation/img/og-image.png"><meta data-rh="true" name="og:url" content="https://patterns.greensoftware.foundation/"><meta data-rh="true" name="og:site_name" content="Green Software Patterns"><meta data-rh="true" name="og:type" content="website"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Select the right hardware/VM instance types for AI/ML training | Green Software Patterns"><meta data-rh="true" name="description" content="Selecting the right hardware/VM instance types for AI/ML training and inference is critical for energy efficiency. The hardware landscape has evolved dramatically with specialized AI accelerators, GPUs, and custom silicon offering vastly different performance-per-watt characteristics."><meta data-rh="true" property="og:description" content="Selecting the right hardware/VM instance types for AI/ML training and inference is critical for energy efficiency. The hardware landscape has evolved dramatically with specialized AI accelerators, GPUs, and custom silicon offering vastly different performance-per-watt characteristics."><link data-rh="true" rel="icon" href="/gsf-patterns/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://russelltrow.github.io/gsf-patterns/catalog/architecture/right-hardware-type"><link data-rh="true" rel="alternate" href="https://russelltrow.github.io/gsf-patterns/catalog/architecture/right-hardware-type" hreflang="en"><link data-rh="true" rel="alternate" href="https://russelltrow.github.io/gsf-patterns/catalog/architecture/right-hardware-type" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Patterns","item":"https://russelltrow.github.io/gsf-patterns/catalog/"},{"@type":"ListItem","position":2,"name":"Architecture","item":"https://russelltrow.github.io/gsf-patterns/catalog/architecture/"},{"@type":"ListItem","position":3,"name":"Select the right hardware/VM instance types for AI/ML training","item":"https://russelltrow.github.io/gsf-patterns/catalog/architecture/right-hardware-type"}]}</script><link rel="preconnect" href="https://www.google-analytics.com">
+<link rel="preconnect" href="https://www.googletagmanager.com">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-G3P4S2WSTC"></script>
+<script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-G3P4S2WSTC",{})</script><link rel="stylesheet" href="/gsf-patterns/assets/css/styles.1a187a85.css">
+<script src="/gsf-patterns/assets/js/runtime~main.50480572.js" defer="defer"></script>
+<script src="/gsf-patterns/assets/js/main.68381607.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>document.documentElement.setAttribute("data-theme","light"),document.documentElement.setAttribute("data-theme-choice","light"),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/gsf-patterns/"><div class="navbar__logo"><img src="/gsf-patterns/img/logo.svg" alt="Green Software Patterns Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/gsf-patterns/img/logo.svg" alt="Green Software Patterns Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">Green Software Patterns</b></a><a class="navbar__item navbar__link" href="/gsf-patterns/catalog/requirements/">Requirements</a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/gsf-patterns/catalog/architecture/">Architecture</a><a class="navbar__item navbar__link" href="/gsf-patterns/catalog/development/">Development</a><a class="navbar__item navbar__link" href="/gsf-patterns/catalog/operations/">Operations</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><a href="https://greensoftware.foundation/" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">Green Software Foundation<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/gsf-patterns/"><span title="Home" class="linkLabel_WmDU">Home</span></a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--active" href="/gsf-patterns/catalog/"><span title="Patterns" class="categoryLinkLabel_W154">Patterns</span></a><button aria-label="Collapse sidebar category &#x27;Patterns&#x27;" aria-expanded="true" type="button" class="clean-btn menu__caret"></button></div><ul class="menu__list"><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/gsf-patterns/catalog/requirements/"><span title="Requirements" class="categoryLinkLabel_W154">Requirements</span></a><button aria-label="Expand sidebar category &#x27;Requirements&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--active" tabindex="0" href="/gsf-patterns/catalog/architecture/"><span title="Architecture" class="categoryLinkLabel_W154">Architecture</span></a><button aria-label="Collapse sidebar category &#x27;Architecture&#x27;" aria-expanded="true" type="button" class="clean-btn menu__caret"></button></div><ul class="menu__list"><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-3 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/gsf-patterns/catalog/architecture/System Topology/energy-efficent-ai-edge"><span title="System Topology" class="categoryLinkLabel_W154">System Topology</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-3 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/gsf-patterns/catalog/architecture/Technology Selection/efficent-format-for-model-training"><span title="Technology Selection" class="categoryLinkLabel_W154">Technology Selection</span></a></div></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/gsf-patterns/catalog/architecture/choose-region-closest-to-users"><span title="Choose the region that is closest to users" class="linkLabel_WmDU">Choose the region that is closest to users</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/gsf-patterns/catalog/architecture/compress-ml-models-for-inference"><span title="Optimize the size of AI/ML models" class="linkLabel_WmDU">Optimize the size of AI/ML models</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/gsf-patterns/catalog/architecture/containerize-your-workload-where-applicable"><span title="Containerize your workloads" class="linkLabel_WmDU">Containerize your workloads</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/gsf-patterns/catalog/architecture/evaluate-energy-efficient-processors"><span title="Evaluate and adopt energy-efficient processor architectures" class="linkLabel_WmDU">Evaluate and adopt energy-efficient processor architectures</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/gsf-patterns/catalog/architecture/implement-stateless-design"><span title="Implement stateless design" class="linkLabel_WmDU">Implement stateless design</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/gsf-patterns/catalog/architecture/queue-non-urgent-requests"><span title="Queue non-urgent processing requests" class="linkLabel_WmDU">Queue non-urgent processing requests</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/gsf-patterns/catalog/architecture/reduce-network-traversal-between-VMs"><span title="Reduce network traversal between VMs" class="linkLabel_WmDU">Reduce network traversal between VMs</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/gsf-patterns/catalog/architecture/right-hardware-type"><span title="Select the right hardware/VM instance types for AI/ML training" class="linkLabel_WmDU">Select the right hardware/VM instance types for AI/ML training</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/gsf-patterns/catalog/architecture/scale-logical-components-independently"><span title="Scale logical components independently" class="linkLabel_WmDU">Scale logical components independently</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/gsf-patterns/catalog/architecture/use-serverless"><span title="Use serverless cloud services" class="linkLabel_WmDU">Use serverless cloud services</span></a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/gsf-patterns/catalog/development/"><span title="Development" class="categoryLinkLabel_W154">Development</span></a><button aria-label="Expand sidebar category &#x27;Development&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/gsf-patterns/catalog/operations/"><span title="Operations" class="categoryLinkLabel_W154">Operations</span></a><button aria-label="Expand sidebar category &#x27;Operations&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" href="/gsf-patterns/guide/"><span title="Guide" class="categoryLinkLabel_W154">Guide</span></a><button aria-label="Expand sidebar category &#x27;Guide&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/gsf-patterns/tags/"><span title="Tags" class="linkLabel_WmDU">Tags</span></a></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/gsf-patterns/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item"><a class="breadcrumbs__link" href="/gsf-patterns/catalog/"><span>Patterns</span></a></li><li class="breadcrumbs__item"><a class="breadcrumbs__link" href="/gsf-patterns/catalog/architecture/"><span>Architecture</span></a></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">Select the right hardware/VM instance types for AI/ML training</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Select the right hardware/VM instance types for AI/ML training</h1></header>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="description">Description<a href="#description" class="hash-link" aria-label="Direct link to Description" title="Direct link to Description" translate="no">​</a></h2>
+<p>Training an AI model has a significant carbon footprint. Selecting the right hardware/VM instance types for training and inference is one of the most impactful choices you can make as part of your energy-efficient AI/ML process. The hardware landscape has evolved dramatically since 2022, with a proliferation of specialized AI accelerators, GPU generations, and custom silicon options, each with vastly different performance-per-watt characteristics and suitability for different workloads.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="solution">Solution<a href="#solution" class="hash-link" aria-label="Direct link to Solution" title="Direct link to Solution" translate="no">​</a></h2>
+<p>Evaluate and select hardware based on your specific workload requirements, balancing performance, energy efficiency, cost, and availability:</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="modern-gpu-hardware-2025">Modern GPU Hardware (2025)<a href="#modern-gpu-hardware-2025" class="hash-link" aria-label="Direct link to Modern GPU Hardware (2025)" title="Direct link to Modern GPU Hardware (2025)" translate="no">​</a></h3>
+<p><strong>NVIDIA GPUs (Market Leader):</strong></p>
+<p><em>Training-Optimized:</em></p>
+<ul>
+<li class="">
+<p><strong>H100/H200 (Hopper architecture)</strong>: Flagship for large-scale training (70B+ parameter models)</p>
+<ul>
+<li class="">60-80 TFLOPS FP16, ~700W TDP</li>
+<li class="">Best for: Distributed training of foundation models, massive batch sizes</li>
+<li class="">TCO: High upfront cost, excellent performance-per-watt for large workloads</li>
+</ul>
+</li>
+<li class="">
+<p><strong>L40S (Ada Lovelace)</strong>: Versatile for training and inference</p>
+<ul>
+<li class="">45 TFLOPS FP16, 350W TDP</li>
+<li class="">Best for: Mid-size models (7B-30B), mixed training/inference workloads</li>
+<li class="">Excellent balance of performance and power efficiency</li>
+</ul>
+</li>
+</ul>
+<p><em>Inference-Optimized:</em></p>
+<ul>
+<li class=""><strong>L4 (Ada Lovelace)</strong>: Efficient inference and fine-tuning<!-- -->
+<ul>
+<li class="">30 TFLOPS FP16, 72W TDP</li>
+<li class="">Best for: Inference serving, LoRA/QLoRA fine-tuning, edge deployment</li>
+<li class="">Outstanding power efficiency for inference workloads</li>
+</ul>
+</li>
+</ul>
+<p><em>Consumer/Development:</em></p>
+<ul>
+<li class=""><strong>RTX 6000 Ada</strong>: Workstation-class for research and development<!-- -->
+<ul>
+<li class="">48GB memory, good for prototyping 7B-13B models</li>
+</ul>
+</li>
+</ul>
+<p><strong>AMD GPUs (Growing Ecosystem):</strong></p>
+<ul>
+<li class=""><strong>MI300X</strong>: Competitive with H100 for LLM training<!-- -->
+<ul>
+<li class="">192GB HBM3, excellent for large model training</li>
+<li class="">Best for: Organizations diversifying from NVIDIA</li>
+<li class="">Mature ROCm software stack for PyTorch/TensorFlow</li>
+</ul>
+</li>
+<li class=""><strong>MI300/MI250</strong>: Previous generation, cost-effective for certain workloads</li>
+</ul>
+<p><strong>Intel GPUs:</strong></p>
+<ul>
+<li class=""><strong>Gaudi2/Gaudi3</strong>: Purpose-built AI accelerators<!-- -->
+<ul>
+<li class="">Competitive pricing vs. NVIDIA</li>
+<li class="">Growing software ecosystem</li>
+<li class="">Best for: Cost-sensitive large-scale training</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="custom-silicon-and-cloud-tpus">Custom Silicon and Cloud TPUs<a href="#custom-silicon-and-cloud-tpus" class="hash-link" aria-label="Direct link to Custom Silicon and Cloud TPUs" title="Direct link to Custom Silicon and Cloud TPUs" translate="no">​</a></h3>
+<p><strong>Google Cloud TPUs:</strong></p>
+<ul>
+<li class=""><strong>TPU v5e/v5p</strong>: 5th generation, optimized for LLM training and inference<!-- -->
+<ul>
+<li class="">TPU v5e: Cost-optimized for training and inference</li>
+<li class="">TPU v5p: Highest performance for cutting-edge research</li>
+<li class="">Excellent for JAX-based training (native framework)</li>
+<li class="">2-3x better performance-per-watt than comparable GPUs for certain workloads</li>
+</ul>
+</li>
+</ul>
+<p><strong>AWS Custom Silicon:</strong></p>
+<ul>
+<li class="">
+<p><strong>Trainium (Trn1)</strong>: Purpose-built for training</p>
+<ul>
+<li class="">Up to 40% better price-performance than GPUs for LLM training</li>
+<li class="">Best for: Large-scale training on AWS infrastructure</li>
+<li class="">Supported by PyTorch and NeuronSDK</li>
+</ul>
+</li>
+<li class="">
+<p><strong>Inferentia2 (Inf2)</strong>: Optimized for inference</p>
+<ul>
+<li class="">10x better throughput vs. GPU inference for similar cost</li>
+<li class="">Best for: High-volume inference serving, chatbots, embeddings</li>
+</ul>
+</li>
+</ul>
+<p><strong>Emerging Specialized Hardware:</strong></p>
+<ul>
+<li class="">
+<p><strong>Cerebras WSE-3</strong>: Wafer-scale engine for massive models</p>
+<ul>
+<li class="">Entire wafer as single chip, 900,000 cores</li>
+<li class="">Best for: Research institutions, extreme-scale models</li>
+<li class="">Unique architecture for sparse models</li>
+</ul>
+</li>
+<li class="">
+<p><strong>SambaNova DataScale</strong>: Reconfigurable dataflow architecture</p>
+<ul>
+<li class="">Efficient for training and inference</li>
+<li class="">Growing enterprise adoption</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="decision-matrix-for-hardware-selection">Decision Matrix for Hardware Selection<a href="#decision-matrix-for-hardware-selection" class="hash-link" aria-label="Direct link to Decision Matrix for Hardware Selection" title="Direct link to Decision Matrix for Hardware Selection" translate="no">​</a></h3>
+<p><strong>By Model Size:</strong></p>
+<ul>
+<li class=""><strong>&lt;1B parameters</strong>: CPU or single consumer GPU (RTX 4090, L4)</li>
+<li class=""><strong>1B-7B parameters</strong>: Single L4, L40S, or A100</li>
+<li class=""><strong>7B-30B parameters</strong>: L40S, A100, H100, MI300X</li>
+<li class=""><strong>30B-70B parameters</strong>: H100, MI300X, multi-GPU setup, or TPU v5e</li>
+<li class=""><strong>70B+ parameters</strong>: H100/H200 multi-node, TPU v5p, or Trainium clusters</li>
+</ul>
+<p><strong>By Workload Type:</strong></p>
+<p><em>Pre-training from scratch:</em></p>
+<ul>
+<li class="">H100/H200 for maximum speed</li>
+<li class="">TPU v5e/v5p for cost-efficiency at scale</li>
+<li class="">Trainium for AWS-native workflows</li>
+</ul>
+<p><em>Fine-tuning:</em></p>
+<ul>
+<li class=""><strong>LoRA/QLoRA (parameter-efficient)</strong>: L4, single A100, consumer GPUs</li>
+<li class=""><strong>Full fine-tuning</strong>: Same as pre-training but smaller scale</li>
+<li class="">Consider spot instances for cost savings</li>
+</ul>
+<p><em>Inference serving:</em></p>
+<ul>
+<li class=""><strong>High-throughput</strong>: Inferentia2, L4 clusters</li>
+<li class=""><strong>Low-latency</strong>: L4, L40S with TensorRT or vLLM optimization</li>
+<li class=""><strong>Edge deployment</strong>: Quantized models on CPU or mobile accelerators</li>
+</ul>
+<p><strong>By Cost Profile:</strong></p>
+<ul>
+<li class=""><strong>Budget-conscious</strong>: AMD MI-series, Intel Gaudi, Trainium</li>
+<li class=""><strong>Performance-critical</strong>: NVIDIA H100/H200</li>
+<li class=""><strong>Balanced</strong>: L40S, TPU v5e</li>
+<li class=""><strong>Development</strong>: Consumer GPUs (RTX series) or L4</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="energy-efficiency-metrics-2025-benchmarks">Energy Efficiency Metrics (2025 Benchmarks)<a href="#energy-efficiency-metrics-2025-benchmarks" class="hash-link" aria-label="Direct link to Energy Efficiency Metrics (2025 Benchmarks)" title="Direct link to Energy Efficiency Metrics (2025 Benchmarks)" translate="no">​</a></h3>
+<p><strong>TFLOPS per Watt (FP16 Training):</strong></p>
+<ul>
+<li class="">L4: ~417 TFLOPS/watt (30 TFLOPS / 72W) - Most efficient for inference</li>
+<li class="">L40S: ~129 TFLOPS/watt (45 TFLOPS / 350W)</li>
+<li class="">H100: ~86-114 TFLOPS/watt (60-80 TFLOPS / 700W)</li>
+<li class="">TPU v5e: ~100-150 TFLOPS/watt (estimated, workload-dependent)</li>
+</ul>
+<p><strong>Total Cost of Ownership (TCO):</strong>
+Consider:</p>
+<ul>
+<li class="">Initial hardware or hourly cloud cost</li>
+<li class="">Power consumption ($/kWh × Watts × training hours)</li>
+<li class="">Cooling requirements (typically 1.5x power consumption)</li>
+<li class="">Embodied carbon of manufacturing</li>
+<li class="">Utilization rates and idle power</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="modern-workload-examples-and-patterns">Modern Workload Examples and Patterns<a href="#modern-workload-examples-and-patterns" class="hash-link" aria-label="Direct link to Modern Workload Examples and Patterns" title="Direct link to Modern Workload Examples and Patterns" translate="no">​</a></h3>
+<p><strong>Training Scenarios:</strong></p>
+<ul>
+<li class=""><strong>7B model training</strong>: 8x L40S or 4x H100, ~2-4 weeks on typical datasets</li>
+<li class=""><strong>70B model training</strong>: 64-128x H100 or TPU v5p pod, weeks to months</li>
+<li class=""><strong>LoRA fine-tuning of 7B model</strong>: Single L4 or A100, hours to days</li>
+</ul>
+<p><strong>Distributed Training Orchestration:</strong></p>
+<ul>
+<li class="">DeepSpeed: Multi-node training with ZeRO optimizer</li>
+<li class="">FSDP (PyTorch): Fully Sharded Data Parallel for large models</li>
+<li class="">Megatron-LM: NVIDIA&#x27;s framework for massive models</li>
+<li class="">Enable training models larger than single-GPU memory</li>
+</ul>
+<p><strong>Inference Optimization:</strong></p>
+<ul>
+<li class="">vLLM: High-throughput inference with PagedAttention</li>
+<li class="">TensorRT-LLM: NVIDIA&#x27;s optimized inference engine</li>
+<li class="">Text Generation Inference (TGI): HuggingFace&#x27;s production server</li>
+<li class="">Batch multiple requests to maximize GPU utilization (10-100x better throughput)</li>
+</ul>
+<p><strong>Cost Optimization Strategies:</strong></p>
+<ul>
+<li class=""><strong>Spot/preemptible instances</strong>: 60-90% savings for interruptible training</li>
+<li class=""><strong>Reserved instances</strong>: 30-50% savings for predictable workloads</li>
+<li class=""><strong>Mixed precision training</strong>: FP16/BF16 for 2x speedup with minimal accuracy loss</li>
+<li class=""><strong>Gradient accumulation</strong>: Simulate large batches on smaller GPUs</li>
+<li class=""><strong>Checkpointing</strong>: Resume training after interruptions (essential for spot instances)</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="sci-impact">SCI Impact<a href="#sci-impact" class="hash-link" aria-label="Direct link to SCI Impact" title="Direct link to SCI Impact" translate="no">​</a></h2>
+<p><code>SCI = (E * I) + M per R</code>
+<a href="https://grnsft.org/sci" target="_blank" rel="noopener noreferrer" class="">Software Carbon Intensity Spec</a></p>
+<p>Selecting the right hardware/VM types impacts SCI as follows:</p>
+<ul>
+<li class="">
+<p><code>E</code>: Energy-efficient hardware reduces electricity consumption through:</p>
+<ul>
+<li class="">Higher TFLOPS-per-watt for actual workload</li>
+<li class="">Lower idle power consumption</li>
+<li class="">Better memory bandwidth efficiency</li>
+<li class="">Optimized tensor operations for AI workloads</li>
+</ul>
+</li>
+<li class="">
+<p><code>M</code>: Reduces embodied carbon by:</p>
+<ul>
+<li class="">Requiring fewer total accelerators for same workload</li>
+<li class="">Shorter training times reducing resource utilization</li>
+<li class="">Efficient inference enables running on smaller infrastructure</li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="assumptions">Assumptions<a href="#assumptions" class="hash-link" aria-label="Direct link to Assumptions" title="Direct link to Assumptions" translate="no">​</a></h2>
+<ul>
+<li class="">Cloud provider offers appropriate hardware in your target regions</li>
+<li class="">Software frameworks support the selected hardware (drivers, SDKs)</li>
+<li class="">Workload can be optimized for the hardware architecture</li>
+<li class="">Budget allows for energy-efficient hardware (which often has higher upfront cost)</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="considerations">Considerations<a href="#considerations" class="hash-link" aria-label="Direct link to Considerations" title="Direct link to Considerations" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="hardware-selection-criteria">Hardware Selection Criteria:<a href="#hardware-selection-criteria" class="hash-link" aria-label="Direct link to Hardware Selection Criteria:" title="Direct link to Hardware Selection Criteria:" translate="no">​</a></h3>
+<p><strong>Performance:</strong></p>
+<ul>
+<li class="">Peak TFLOPS less important than sustained performance for your specific model architecture</li>
+<li class="">Memory capacity and bandwidth critical for large models</li>
+<li class="">Interconnect speed matters for multi-GPU training</li>
+</ul>
+<p><strong>Software Ecosystem:</strong></p>
+<ul>
+<li class=""><strong>NVIDIA</strong>: Most mature software stack (CUDA, cuDNN, TensorRT)</li>
+<li class=""><strong>AMD</strong>: Growing PyTorch support via ROCm</li>
+<li class=""><strong>TPU</strong>: Best with JAX, good with PyTorch/XLA</li>
+<li class=""><strong>AWS Trainium</strong>: Requires NeuronSDK, growing PyTorch support</li>
+</ul>
+<p><strong>Availability and Cost:</strong></p>
+<ul>
+<li class="">GPU availability has improved since 2022-2023 shortage</li>
+<li class="">Cloud region selection affects both availability and carbon intensity</li>
+<li class="">Consider carbon-aware scheduling (train in low-carbon regions/times)</li>
+</ul>
+<p><strong>Future-Proofing:</strong></p>
+<ul>
+<li class="">Rapid hardware evolution means 2-3 year refresh cycles</li>
+<li class="">Design training pipelines to be hardware-agnostic when possible</li>
+<li class="">Use frameworks that abstract hardware (PyTorch, JAX, TensorFlow)</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="red-flags-to-avoid">Red Flags to Avoid:<a href="#red-flags-to-avoid" class="hash-link" aria-label="Direct link to Red Flags to Avoid:" title="Direct link to Red Flags to Avoid:" translate="no">​</a></h3>
+<ul>
+<li class="">Over-provisioning: Using H100 for workloads that run fine on L4</li>
+<li class="">Under-provisioning: Insufficient memory causing excessive swapping</li>
+<li class="">Ignoring power efficiency for long-running training jobs</li>
+<li class="">Not considering spot instances for fault-tolerant workloads</li>
+<li class="">Using outdated hardware (V100, P100) when efficient alternatives exist</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="references">References<a href="#references" class="hash-link" aria-label="Direct link to References" title="Direct link to References" translate="no">​</a></h2>
+<ul>
+<li class=""><a href="https://arxiv.org/pdf/1906.02243.pdf" target="_blank" rel="noopener noreferrer" class="">Energy and Policy Considerations for Deep Learning in NLP</a></li>
+<li class=""><a href="https://resources.nvidia.com/en-us-tensor-core" target="_blank" rel="noopener noreferrer" class="">NVIDIA H100 Tensor Core GPU Architecture</a></li>
+<li class=""><a href="https://www.amd.com/en/products/accelerators/instinct/mi300/mi300x.html" target="_blank" rel="noopener noreferrer" class="">AMD MI300X Architecture</a></li>
+<li class=""><a href="https://cloud.google.com/tpu/docs/v5e" target="_blank" rel="noopener noreferrer" class="">Google TPU v5e Documentation</a></li>
+<li class=""><a href="https://aws.amazon.com/machine-learning/trainium/" target="_blank" rel="noopener noreferrer" class="">AWS Trainium</a></li>
+<li class=""><a href="https://aws.amazon.com/machine-learning/inferentia/" target="_blank" rel="noopener noreferrer" class="">AWS Inferentia2</a></li>
+<li class=""><a href="https://github.com/vllm-project/vllm" target="_blank" rel="noopener noreferrer" class="">vLLM - Fast LLM Inference</a></li>
+<li class=""><a href="https://www.deepspeed.ai/" target="_blank" rel="noopener noreferrer" class="">DeepSpeed for Distributed Training</a></li>
+<li class=""><a href="https://grnsft.org/sci" target="_blank" rel="noopener noreferrer" class="">Software Carbon Intensity Spec</a></li>
+</ul></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-tags-row"><div class="col"><b>Tags:</b><ul class="tags_jXut padding--none margin-left--sm"><li class="tag_QGVx"><a rel="tag" class="tag_zVej tagRegular_sFm0" href="/gsf-patterns/tags/ai">ai</a></li><li class="tag_QGVx"><a rel="tag" class="tag_zVej tagRegular_sFm0" href="/gsf-patterns/tags/machine-learning">machine-learning</a></li><li class="tag_QGVx"><a rel="tag" class="tag_zVej tagRegular_sFm0" href="/gsf-patterns/tags/cloud">cloud</a></li><li class="tag_QGVx"><a rel="tag" class="tag_zVej tagRegular_sFm0" href="/gsf-patterns/tags/compute">compute</a></li><li class="tag_QGVx"><a rel="tag" class="tag_zVej tagRegular_sFm0" href="/gsf-patterns/tags/role-data-scientist">role:data-scientist</a></li><li class="tag_QGVx"><a rel="tag" class="tag_zVej tagRegular_sFm0" href="/gsf-patterns/tags/role-cloud-engineer">role:cloud-engineer</a></li><li class="tag_QGVx"><a rel="tag" class="tag_zVej tagRegular_sFm0" href="/gsf-patterns/tags/role-software-engineer">role:software-engineer</a></li><li class="tag_QGVx"><a rel="tag" class="tag_zVej tagRegular_sFm0" href="/gsf-patterns/tags/size-large">size:large</a></li></ul></div></div><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col noPrint_WFHX"><a href="https://github.com/Green-Software-Foundation/patterns/edit/main/docs/catalog/architecture/right-hardware-type.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/gsf-patterns/catalog/architecture/reduce-network-traversal-between-VMs"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Reduce network traversal between VMs</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/gsf-patterns/catalog/architecture/scale-logical-components-independently"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Scale logical components independently</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#description" class="table-of-contents__link toc-highlight">Description</a></li><li><a href="#solution" class="table-of-contents__link toc-highlight">Solution</a><ul><li><a href="#modern-gpu-hardware-2025" class="table-of-contents__link toc-highlight">Modern GPU Hardware (2025)</a></li><li><a href="#custom-silicon-and-cloud-tpus" class="table-of-contents__link toc-highlight">Custom Silicon and Cloud TPUs</a></li><li><a href="#decision-matrix-for-hardware-selection" class="table-of-contents__link toc-highlight">Decision Matrix for Hardware Selection</a></li><li><a href="#energy-efficiency-metrics-2025-benchmarks" class="table-of-contents__link toc-highlight">Energy Efficiency Metrics (2025 Benchmarks)</a></li><li><a href="#modern-workload-examples-and-patterns" class="table-of-contents__link toc-highlight">Modern Workload Examples and Patterns</a></li></ul></li><li><a href="#sci-impact" class="table-of-contents__link toc-highlight">SCI Impact</a></li><li><a href="#assumptions" class="table-of-contents__link toc-highlight">Assumptions</a></li><li><a href="#considerations" class="table-of-contents__link toc-highlight">Considerations</a><ul><li><a href="#hardware-selection-criteria" class="table-of-contents__link toc-highlight">Hardware Selection Criteria:</a></li><li><a href="#red-flags-to-avoid" class="table-of-contents__link toc-highlight">Red Flags to Avoid:</a></li></ul></li><li><a href="#references" class="table-of-contents__link toc-highlight">References</a></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Links</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://github.com/Green-Software-Foundation/green-software-patterns/" target="_blank" rel="noopener noreferrer" class="footer__link-item">Github<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://patterns.greensoftware.foundation" target="_blank" rel="noopener noreferrer" class="footer__link-item">Website<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">LEGAL</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://greensoftware.foundation/policy/trademark" target="_blank" rel="noopener noreferrer" class="footer__link-item">Trademark Policy<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://greensoftware.foundation/policy/terms" target="_blank" rel="noopener noreferrer" class="footer__link-item">Terms and Privacy Policy<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">GSF Info</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://greensoftware.foundation" target="_blank" rel="noopener noreferrer" class="footer__link-item">Green Software Foundation<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://twitter.com/gsfcommunity" target="_blank" rel="noopener noreferrer" class="footer__link-item">Twitter<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://www.linkedin.com/company/green-software-foundation/" target="_blank" rel="noopener noreferrer" class="footer__link-item">Linkedin<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 Joint Development Foundation Projects, LLC, Green Software Foundation Series</div></div></div></footer></div>
+</body>
+</html>
