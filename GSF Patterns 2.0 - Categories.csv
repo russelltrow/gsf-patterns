@@ -1,0 +1,24 @@
+Category ,Proposed Description,Current Description
+"1 Requirements
+(Define)","Set the right expectations from the start. These patterns help you define what ""good enough"" looks like for your software - balancing business needs, user experience, and environmental impact. Make intentional choices about security, performance, and quality before you build, ensuring you don't over-engineer or under-deliver.
+",The process of gathering and analysing the needs underpinning the product being created. This includes an exploration of the problem space with users and stakeholders as well as the translation from business requirements and high/level objectives to implementable ones.
+"2 Architecture
+(Architect)","Make structural decisions that multiply efficiency. Choose how your system is built - where it runs, how components communicate, which technologies power it. These foundational choices ripple through everything that follows, determining whether your software will be nimble and efficient or bloated and wasteful.
+",Software architecture is the conceptual blueprint and design of a software system's components and their interaction
+"3 Design
+(Design)","Turn requirements into solutions that fit. Design is where you determine the user experience, information architecture, and detailed specifications that bring your vision to life. Good design eliminates waste by creating exactly what's needed - no more, no less.
+",The process of creating a solution to meet specific requirements
+"4 Development
+(Build)","Write code that does more with less. From choosing efficient languages and frameworks to optimizing data handling and media assets, these patterns help you build software that's fast, lean, and resource-conscious. Make every line of code earn its place.
+",Best practices related to the construction and testing of software code
+"5 Testing
+(Test)","Validate efficiency without waste. Test smarter, not harder - optimizing test data, environments, and execution to verify quality without consuming unnecessary resources. Catch problems early when they're cheapest to fix, both financially and environmentally.
+","The systematic process of evaluating software to verify that it meets specified requirements, functions as intended, and is free of defects."
+"6 Operations
+(Operate)","Run only what you need, when you need it. Scale infrastructure to match actual demand, eliminate idle resources, and automate efficiency into your daily operations. Transform your runtime from a constant drain into a flexible, responsive system that adapts to real-world usage.
+",Operations is the optimal day to day deployment maintenance and running of your software.
+"7 Decommissioning
+(End of life)","End responsibly, not abruptly. When software reaches end-of-life, these patterns help you retire systems gracefully - migrating data, shutting down infrastructure, and cleaning up resources so nothing lingers unnecessarily. Leave no trace.
+",Decommissioning software sustainably.
+8 End User,"Make greener choices about the software you use. Even if you don't write code, you influence environmental impact through the applications you choose, the devices you run them on, and how you configure them. Small changes in usage habits can add up to meaningful impact at scale.
+",Patterns that improve your personal sustainability as a consumer of software.

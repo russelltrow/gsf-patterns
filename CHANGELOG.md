@@ -30,6 +30,28 @@ The patterns catalog has been restructured from technology-based categories (Web
 
 ### Changed
 
+#### Infrastructure and Documentation Updates
+
+**Catalog Index Page** (`docs/catalog/index.md`)
+- Updated category descriptions using proposed descriptions from GSF Patterns 2.0 categories
+- Requirements (Define): "Set the right expectations from the start"
+- Architecture (Architect): "Make structural decisions that multiply efficiency"
+- Development (Build): "Write code that does more with less"
+- Operations (Operate): "Run only what you need, when you need it"
+- Streamlined page to focus on Pattern Categories section
+- Added lifecycle phase labels and key topics for each category
+
+**GitHub Actions Workflow** (`.github/workflows/deploy.yml`)
+- Updated `actions/checkout` from v2 to v4
+- Updated `actions/setup-node` from v3 to v4
+- Updated Node.js from version 18 to 20 (current LTS)
+- Improves security, performance, and long-term support
+
+**Package Manager Cleanup**
+- Removed `package-lock.json` to use Yarn exclusively
+- Resolves package manager conflict warnings in CI/CD
+- Project standardized on Yarn with `yarn.lock`
+
 #### Pattern Content Updates (2025 Modernization)
 
 **AI/ML Model Optimization** (`compress-ml-models-for-inference.md`)
