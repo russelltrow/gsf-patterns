@@ -2,7 +2,7 @@
 version: 1.0
 submitted_by: markus-ntt-seidl
 published_date: 2022-11-10
-category: web
+category: development
 description: Web pages offer a lot of images that aren't displayed on the first loaded screen and can thus be loaded dynamically.
 tags: 
  - web

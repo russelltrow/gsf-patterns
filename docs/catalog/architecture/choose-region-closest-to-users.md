@@ -2,7 +2,7 @@
 version: 1.0
 submitted_by: greenhsu123
 published_date: 2022-11-10
-category: cloud
+category: architecture
 description: From an energy-efficiency perspective, it's better to shorten the distance a network packet travels so that less energy is required to transmit it. Similarly, from an embodied-carbon perspective, when a network packet traverses through less computing equipment, we are more efficient with hardware. 
 tags: 
  - networking

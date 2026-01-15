@@ -2,7 +2,7 @@
 version: 1.0
 submitted_by: yelghali
 published_date: 2022-11-10
-category: cloud
+category: development
 description: Transport Layer Security (TLS) ensures that all data passed between the web server and web browsers remain private and encrypted. However, terminating and re-establishing TLS increases CPU usage and might be unnecessary in certain architectures.
 tags: 
 - cloud

@@ -2,7 +2,7 @@
 version: 1.0
 submitted_by: yelghali
 published_date: 2024-07-30
-category: cloud
+category: architecture
 tags: 
 - cloud
 - network

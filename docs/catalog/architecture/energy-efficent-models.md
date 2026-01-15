@@ -2,7 +2,7 @@
 version: 1.0
 submitted_by: navveenb
 published_date: 2022-11-10
-category: ai
+category: architecture
 description: Evaluate and use alternative, more energy efficient, models that provide similar functionality.
 tags: 
  - ai

@@ -2,7 +2,7 @@
 version: 1.0
 submitted_by: navveenb
 published_date: 2022-11-10
-category: ai
+category: development
 description: As part of your AI/ML process, you should evaluate using a pre-trained model and use transfer learning to avoid training a new model from scratch.
 tags: 
  - ai

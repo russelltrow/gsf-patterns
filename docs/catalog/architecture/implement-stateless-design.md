@@ -2,7 +2,7 @@
 version: 1.0
 submitted_by: yelghali
 published_date: 2022-11-10
-category: cloud
+category: architecture
 description: Service state refers to the in-memory or on-disk data required by a service to function. State includes the data structures and member variables that the service reads and writes. Depending on how the service is architected, the state might also include files or other resources stored on the disk. Applications that consume large memory or on-disk data require larger VM sizes, especially for cloud computing where you would need larger VM SKUs to support high RAM capacity and multiple data disks. 
 tags: 
 - cloud

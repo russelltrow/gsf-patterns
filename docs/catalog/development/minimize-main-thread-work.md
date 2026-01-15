@@ -2,7 +2,7 @@
 version: 1.0
 submitted_by: markus-ntt-seidl
 published_date: 2022-11-22
-category: web
+category: development
 tags: 
  - web
  - compute

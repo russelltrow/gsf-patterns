@@ -2,7 +2,7 @@
 version: 1.0
 submitted_by: markus-ntt-seidl
 published_date: 2022-11-09
-category: cloud
+category: requirements
 tags: 
  - cloud
  - role:cloud-engineer

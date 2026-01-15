@@ -2,7 +2,7 @@
 version: 1.0
 submitted_by: navveenb
 published_date: 2022-11-10
-category: ai
+category: development
 description: Depending on the model parameters and training iterations, training an AI/ML model consumes a lot of power and requires many servers which contribute to embodied emissions.
 tags: 
  - ai

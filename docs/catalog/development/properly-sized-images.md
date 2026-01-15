@@ -2,7 +2,7 @@
 version: 1.0
 submitted_by: markus-ntt-seidl
 published_date: 2022-11-10
-category: web
+category: development
 description: Ideally, the stored pixel dimensions are exactly the same, or smaller, as the display size in pixels so that no bandwidth or storage space is wasted.
 tags: 
  - web

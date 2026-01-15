@@ -2,7 +2,7 @@
 version: 1.0
 submitted_by: yelghali
 published_date: 2022-11-10
-category: cloud
+category: operations
 description: Network and web application firewalls provide protection against most common attacks and load shedding bad bots. These tools help to remove unnecessary data transmission and reduce the burden on the cloud infrastructure, while also using lower bandwidth and less infrastructure.
 tags: 
 - cloud

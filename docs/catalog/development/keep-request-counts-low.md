@@ -2,7 +2,7 @@
 version: 1.0
 submitted_by: markus-ntt-seidl
 published_date: 2023-10-25
-category: web
+category: development
 description: Accessing a web page usually retrieves a HTML file from the web server. The HTML may then reference additional resources that the browser has to download.
 tags: 
  - size:medium

@@ -2,7 +2,7 @@
 version: 1.0
 submitted_by: franziska-warncke
 published_date: 2024-03-14
-category: cloud
+category: development
 tags: 
  - cloud
  - size:medium

@@ -12,8 +12,8 @@ A green software pattern if applied correctly will reduce the emissions of your 
 * **Version**: Designation of iteration on the pattern. This will initially be assigned by the patterns working group and defaults to 1.0
 * **Submitted By**: The name of the person(s) submitting the pattern
 * **Published Date**: The date this version of the pattern is published. This will be provided by the patterns working group upon approval
-* **Tag Category**: Select the most appropriate category from: Artificial Intelligence, Cloud, or Web which might apply to this pattern
-* **Tags**: A [pre-defined list of additional tags](/guide/suggested-tags) which might apply to the pattern (e.g. Machine Learning, Gaming, Mobile).
+* **Category**: Select the most appropriate software lifecycle category from: Requirements, Architecture, Development, or Operations which best represents when this pattern is applied
+* **Tags**: A [pre-defined list of additional tags](/guide/suggested-tags) which might apply to the pattern (e.g. AI, Cloud, Web, Machine Learning, Gaming, Mobile).
 
 **Pattern Content**
 * **Title**: Title of the pattern. Please follow the naming convention of an `Action` taken on a `Resource`. Example: "Reduce compute requirements"

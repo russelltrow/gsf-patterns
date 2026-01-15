@@ -2,7 +2,7 @@
 version: 1.0
 submitted_by: markus-ntt-seidl
 published_date: 2022-11-10
-category: web
+category: development
 description: The greater the amount of nodes that are defined in HTML, the greater the time spent processing and rendering each element.
 tags: 
  - size:medium

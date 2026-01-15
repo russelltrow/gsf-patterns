@@ -2,7 +2,7 @@
 version: 1.0
 submitted_by: navveenb
 published_date: 2022-11-10
-category: web
+category: development
 description: Minification removes unnecessary or redundant data without affecting how the resource is processed by the web browser.
 tags: 
  - web

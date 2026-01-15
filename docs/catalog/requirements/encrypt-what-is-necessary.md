@@ -2,7 +2,7 @@
 version: 1.0
 submitted_by: amexboy,gopaltayal,samudurand,shainu-x
 published_date: 2023-12-14
-category: cloud
+category: requirements
 description: Data protection through encryption is a crucial aspect of our security measures. However, the encryption process can be resource-intensive at multiple levels.
 tags:
 - size:medium

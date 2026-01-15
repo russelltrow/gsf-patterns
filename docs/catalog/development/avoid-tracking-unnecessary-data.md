@@ -2,7 +2,7 @@
 version: 1.0
 submitted_by: dubrie, holanita
 published_date: 2022-11-10
-category: web
+category: development
 description: User tracking, user data collection and targeting in things like advertisements are responsible for significant energy use in many digital products, and services.
 tags: 
  - storage
