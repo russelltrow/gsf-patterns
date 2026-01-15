@@ -95,7 +95,7 @@ Evaluate and select hardware based on your specific workload requirements, balan
 ### Decision Matrix for Hardware Selection
 
 **By Model Size:**
-- **<1B parameters**: CPU or single consumer GPU (RTX 4090, L4)
+- **&lt;1B parameters**: CPU or single consumer GPU (RTX 4090, L4)
 - **1B-7B parameters**: Single L4, L40S, or A100
 - **7B-30B parameters**: L40S, A100, H100, MI300X
 - **30B-70B parameters**: H100, MI300X, multi-GPU setup, or TPU v5e

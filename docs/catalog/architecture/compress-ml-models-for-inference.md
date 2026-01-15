@@ -99,7 +99,7 @@ Choose or design architectures optimized for efficiency:
 ### 5. Low-Rank Factorization
 
 Decompose weight matrices into products of smaller matrices:
-- LoRA (Low-Rank Adaptation): Efficient fine-tuning with <1% parameters
+- LoRA (Low-Rank Adaptation): Efficient fine-tuning with &lt;1% parameters
 - QLoRA: Combines quantization with LoRA for ultra-efficient training
 - Enables fine-tuning large models on consumer GPUs
 

@@ -152,7 +152,7 @@ Using efficient file formats for ML development impacts SCI as follows:
 **Model Artifacts:**
 - SafeTensors: 2-3x faster loading than pickle-based formats
 - ONNX with optimization: 10-50% inference speedup vs. native frameworks
-- Quantized formats: 50-75% size reduction with <5% accuracy loss
+- Quantized formats: 50-75% size reduction with &lt;5% accuracy loss
 
 ## References
 
