@@ -12,7 +12,7 @@ const config = {
     "An online open-source database of green software patterns reviewed and curated by the Green Software Foundation",
   // Change to site url
   url: "https://russelltrow.github.io/",
-  baseUrl: "/gsf-patterns",
+  baseUrl: "gsf-patterns/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
