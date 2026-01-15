@@ -1,0 +1,59 @@
+Pattern,Category,Action
+Encrypt what is necessary,Requirements,
+Match your service level objectives to business needs,Requirements,
+Optimize impact on customer devices and equipment,Requirements,
+Shed lower priority traffic,Requirements,
+Optimize the size of AI/ML models,Architecture,"Needs updating - While still valuable, the techniques mentioned (basic quantization) are now table stakes. The pattern needs updating to cover modern approaches like knowledge distillation, pruning, and INT8/FP16 optimization that are standard in 2025."
+Use efficient file formats for AI/ML development,Architecture,"Needs updating - References outdated models like GPT-Neo 125M, DistilBERT"
+Run AI models at the edge,Architecture,
+Select a more energy efficient AI/ML framework,Architecture,
+Use energy efficient AI/ML models,Architecture,
+Select the right hardware/VM instance types for AI/ML training,Architecture,"Needs updating - The landscape has exploded since 2022. This pattern predates the current GPU shortage, specialized AI chips from multiple vendors, and the complex trade-offs between different silicon architectures."
+Adopt serverless architecture for AI/ML workload processes,Architecture,"Delete, too specific"
+Containerize your workloads,Architecture,
+Use a service mesh only if needed,Architecture,"Delete, too specific"
+Implement stateless design,Architecture,
+Queue non-urgent processing requests,Architecture,
+Choose the region that is closest to users,Architecture,
+Evaluate other CPU architectures,Architecture,Merge with Use cloud native processor VMs
+Reduce network traversal between VMs,Architecture,
+Use cloud native processor VMs,Architecture,Merge with Evaluate other CPU architectures
+Use serverless cloud services,Architecture,
+Scale logical components independently,Architecture,
+Use server-side rendering for high-traffic pages,Development,
+Use sustainable regions for AI/ML training,Development,
+Leverage pre-trained models and transfer learning for AI/ML development,Development,
+Terminate TLS at border gateway,Development,
+Use Asynchronous network calls instead of synchronous,Development,
+Use compiled languages,Development,
+Remove unused CSS definitions,Development,
+Avoid tracking unnecessary data,Development,
+Reduce transmitted data,Development,Merge with Compress transmitted data
+Compress transmitted data,Development,Merge with Reduce transmitted data
+Cache static data,Development,
+Compress stored data,Development,
+Optimize image size,Development,
+Defer offscreen images,Development,
+Serve images in modern formats,Development,Needs updating
+Deprecate GIFs for animated content,Development,Merge with Serve images in modern formats
+Minimize the total number of deployed environments,Development,
+Minimize main thread work,Development,
+Minify web assets,Development,
+Keep request counts low,Development,"Consider renaming: ""Reduce unnecessary file loading in a HTML request"""
+Avoid an excessive DOM size,Development,
+Avoid chaining critical requests,Development,
+Enable text compression,Development,"Consider removing as we already have one ""Compress data"" general category."
+Match utilization requirements of virtual machines (VMs),Operations,Merge with Match utilization requirements with pre-configured servers
+Match utilization requirements with pre-configured servers,Operations,Merge with Match utilization requirements of virtual machines (VMs)
+Optimize average CPU utilization,Operations,Merge with Optimize average CPU utilization
+Optimize peak CPU utilization,Operations,Merge with Optimize peak CPU utilization
+Optimise storage utilization,Operations,
+Scale down kubernetes applications when not in use,Operations,Merge with Scale down applications when not in use
+Scale down applications when not in use,Operations,Merge with Scale down kubernetes applications when not in use
+Scale infrastructure with user load,Operations,Merge with Scale Kubernetes workloads based on relevant demand metrics
+Scale Kubernetes workloads based on relevant demand metrics,Operations,Merge with Scale infrastructure with user load
+Time-shift Kubernetes cron jobs,Operations,"Rewrite this pattern to reflect more generally the topic of ""time shift cron jobs"""
+Use circuit breaker patterns,Operations,
+Delete unused storage resources,Operations,Merge into a single storage resource optimisation pattern
+Remove unused assets,Operations,Merge into a single storage resource optimisation pattern
+Set storage retention policies,Operations,Merge into a single storage resource optimisation pattern
