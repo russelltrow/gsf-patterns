@@ -67,39 +67,23 @@ const config = {
         },
         items: [
           {
-            type: 'dropdown',
-            label: 'Patterns',
+            label: 'Requirements',
+            to: '/catalog/requirements/',
             position: 'left',
-            items: [
-              {
-                label: 'Requirements',
-                to: '/catalog/requirements',
-              },
-              {
-                label: 'Architecture',
-                to: '/catalog/architecture',
-              },
-              {
-                label: 'Development',
-                to: '/catalog/development',
-              },
-              {
-                label: 'Operations',
-                to: '/catalog/operations',
-              },
-              {
-                type: 'html',
-                value: '<hr style="margin: 0.3rem 0;">',
-              },
-              {
-                label: 'View All Patterns',
-                to: '/catalog',
-              },
-            ],
           },
           {
-            label: 'Guide',
-            to: '/guide',
+            label: 'Architecture',
+            to: '/catalog/architecture/',
+            position: 'left',
+          },
+          {
+            label: 'Development',
+            to: '/catalog/development/',
+            position: 'left',
+          },
+          {
+            label: 'Operations',
+            to: '/catalog/operations/',
             position: 'left',
           },
           {
