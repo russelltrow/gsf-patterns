@@ -67,6 +67,42 @@ const config = {
         },
         items: [
           {
+            type: 'dropdown',
+            label: 'Patterns',
+            position: 'left',
+            items: [
+              {
+                label: 'Requirements',
+                to: '/catalog/requirements',
+              },
+              {
+                label: 'Architecture',
+                to: '/catalog/architecture',
+              },
+              {
+                label: 'Development',
+                to: '/catalog/development',
+              },
+              {
+                label: 'Operations',
+                to: '/catalog/operations',
+              },
+              {
+                type: 'html',
+                value: '<hr style="margin: 0.3rem 0;">',
+              },
+              {
+                label: 'View All Patterns',
+                to: '/catalog',
+              },
+            ],
+          },
+          {
+            label: 'Guide',
+            to: '/guide',
+            position: 'left',
+          },
+          {
             href: "https://greensoftware.foundation/",
             position: "right",
             label: "Green Software Foundation",
