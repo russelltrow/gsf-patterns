@@ -8,6 +8,7 @@ tags:
  - size:small
  - persona:software-engineer
  - persona:ux-designer
+description: Software that demands frequent hardware upgrades increases embodied carbon from device manufacturing; designing for backwards compatibility extends device lifetimes and reduces the carbon footprint of customer equipment.
 ---
 
 # Optimize impact on customer devices and equipment

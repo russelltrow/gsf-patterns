@@ -80,10 +80,11 @@ export function CategoryPage({ category }: CategoryPageProps): JSX.Element {
     }
   }
 
+  patterns.sort((a, b) => a.title.localeCompare(b.title));
+
   return (
     <div>
       <div className={styles.header}>
-        <div className={styles.headerTag}>Category</div>
         <p className={styles.headerDescription}>{category.description}</p>
         <span className={styles.headerCount}>
           {patterns.length} pattern{patterns.length !== 1 ? "s" : ""}

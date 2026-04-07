@@ -13,6 +13,7 @@ tags:
  - kubernetes
  - role:cloud-engineer
  - size:medium
+description: Placing VMs in the same region or availability zone minimises the physical distance data must travel between instances, reducing the energy consumed by network traversal.
 ---
 
 # Reduce network traversal between VMs

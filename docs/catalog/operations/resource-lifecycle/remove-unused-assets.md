@@ -8,6 +8,7 @@ tags:
  - size:small
  - persona:devops-engineer
  - persona:software-engineer
+description: Unused cloud resources such as databases, storage buckets, and compute instances continue to consume energy and generate embodied carbon; identifying and decommissioning them eliminates unnecessary waste.
 ---
 
 # Remove unused assets

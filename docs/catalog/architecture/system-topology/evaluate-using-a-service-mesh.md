@@ -12,6 +12,7 @@ tags:
  - kubernetes
  - role:cloud-engineer
  - size:medium
+description: Service meshes add overhead through additional containers and increased network traffic, so they should only be deployed for applications that genuinely require the capabilities they provide.
 ---
 
 # Use a service mesh only if needed

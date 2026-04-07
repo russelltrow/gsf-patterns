@@ -8,7 +8,7 @@ tags:
  - size:small
  - programming-language
  - persona:software-engineer
-
+description: Interpreted languages re-parse and compile code on every execution, consuming more energy than pre-compiled binaries, which perform compilation once and run more efficiently at runtime.
 ---
 
 # Use compiled languages

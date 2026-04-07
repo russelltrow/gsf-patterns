@@ -11,6 +11,7 @@ tags:
  - kubernetes
  - role:cloud-engineer
  - size:medium
+description: Containerizing workloads enables better resource utilisation and bin packing, reducing unnecessary compute allocation and embodied carbon compared to running full virtual machines.
 ---
 
 # Containerize your workloads

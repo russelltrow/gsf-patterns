@@ -8,6 +8,7 @@ tags:
  - size:medium
  - persona:devops-engineer
  - persona:data-engineer
+description: Storing uncompressed data wastes bandwidth and increases storage capacity requirements; applying appropriate compression reduces both storage consumption and the energy needed to read and write it.
 ---
 
 # Compress stored data

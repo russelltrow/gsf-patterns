@@ -10,6 +10,7 @@ tags:
  - persona:infrastructure-engineer
  - persona:devops-engineer
  - persona:solution-architect
+description: Serverless cloud services scale dynamically with demand and share infrastructure across many applications, reducing idle resource consumption and lowering embodied carbon emissions.
 ---
 
 # Use serverless cloud services

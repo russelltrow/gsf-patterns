@@ -8,6 +8,7 @@ tags:
  - compute
  - size:small
  - persona:front-end-engineer
+description: Long-running JavaScript on the browser's main thread underutilises multi-core CPUs; offloading heavy computations to Web Workers or server-side implementations reduces energy consumption and improves efficiency.
 ---
 
 # Minimize main thread work

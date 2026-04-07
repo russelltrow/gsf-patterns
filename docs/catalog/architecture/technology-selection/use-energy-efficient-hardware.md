@@ -12,6 +12,7 @@ tags:
  - role:software-engineer
  - role:cloud-engineer
  - size:medium
+description: Cloud VMs built on energy-efficient processors, such as ARM-based cloud-native chips, can run scale-out workloads with significantly lower energy consumption and embodied carbon than traditional alternatives.
 ---
 
 # Use cloud native processor VMs

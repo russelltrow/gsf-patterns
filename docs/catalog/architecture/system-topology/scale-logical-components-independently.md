@@ -12,6 +12,7 @@ tags:
  - role:software-engineer
  - role:cloud-engineer
  - size:medium
+description: Decomposing applications into independently scalable microservices allows each component to be right-sized for its own demand, reducing overall compute resource consumption and embodied carbon.
 ---
 
 # Scale logical components independently
