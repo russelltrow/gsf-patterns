@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "@docusaurus/Link";
 import { personas, type Persona, type Pattern } from "@site/src/data/personas";
+import { categories } from "@site/src/data/categories";
 import styles from "./styles.module.css";
 
 function groupByCategory(patterns: Pattern[]): Map<string, Pattern[]> {
@@ -58,6 +59,35 @@ export default function PersonaPage({ persona }: Props): JSX.Element {
           </div>
         ))
       )}
+    </div>
+  );
+}
+
+export function CategoriesIndexContent(): JSX.Element {
+  const patternsByCategory = new Map<string, Set<string>>();
+  for (const persona of personas) {
+    for (const pattern of persona.patterns) {
+      const key = pattern.category;
+      if (!patternsByCategory.has(key)) patternsByCategory.set(key, new Set());
+      patternsByCategory.get(key)!.add(pattern.permalink);
+    }
+  }
+
+  return (
+    <div className={styles.indexGrid}>
+      {categories.map((cat) => {
+        const count = patternsByCategory.get(cat.name)?.size ?? 0;
+        return (
+          <Link key={cat.slug} to={cat.path} className={styles.indexCard}>
+            <div className={styles.indexCardHeader}>
+              <span className={styles.indexCardName}>{cat.name}</span>
+              <span className={styles.indexCardCount}>{count}</span>
+            </div>
+            <p className={styles.indexCardDescription}>{cat.description}</p>
+            <span className={styles.indexCardCta}>View patterns →</span>
+          </Link>
+        );
+      })}
     </div>
   );
 }
