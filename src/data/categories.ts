@@ -31,3 +31,5 @@ export const categories: Category[] = [
     path: "/catalog/operations",
   },
 ];
+
+export const categoryMap = new Map<string, Category>(categories.map(c => [c.slug, c]));

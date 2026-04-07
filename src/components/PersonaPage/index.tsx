@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "@docusaurus/Link";
 import { personas, type Persona, type Pattern } from "@site/src/data/personas";
-import { categories } from "@site/src/data/categories";
+import { categories, type Category } from "@site/src/data/categories";
 import styles from "./styles.module.css";
 
 function groupByCategory(patterns: Pattern[]): Map<string, Pattern[]> {
@@ -58,6 +58,55 @@ export default function PersonaPage({ persona }: Props): JSX.Element {
             </div>
           </div>
         ))
+      )}
+    </div>
+  );
+}
+
+type CategoryPageProps = {
+  category: Category;
+};
+
+export function CategoryPage({ category }: CategoryPageProps): JSX.Element {
+  // Collect all unique patterns for this category, deduped by permalink
+  const seen = new Set<string>();
+  const patterns: Pattern[] = [];
+  for (const persona of personas) {
+    for (const pattern of persona.patterns) {
+      if (pattern.category === category.name && !seen.has(pattern.permalink)) {
+        seen.add(pattern.permalink);
+        patterns.push(pattern);
+      }
+    }
+  }
+
+  return (
+    <div>
+      <div className={styles.header}>
+        <div className={styles.headerTag}>Category</div>
+        <p className={styles.headerDescription}>{category.description}</p>
+        <span className={styles.headerCount}>
+          {patterns.length} pattern{patterns.length !== 1 ? "s" : ""}
+        </span>
+      </div>
+
+      {patterns.length === 0 ? (
+        <p className={styles.emptyState}>No patterns in this category yet.</p>
+      ) : (
+        <div className={styles.patternGrid}>
+          {patterns.map((pattern) => (
+            <Link
+              key={pattern.permalink}
+              to={pattern.permalink}
+              className={styles.patternCard}
+            >
+              <span className={styles.patternTitle}>{pattern.title}</span>
+              {pattern.description && (
+                <p className={styles.patternDescription}>{pattern.description}</p>
+              )}
+            </Link>
+          ))}
+        </div>
       )}
     </div>
   );
