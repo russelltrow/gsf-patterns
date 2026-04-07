@@ -70,14 +70,14 @@ const config = {
         },
         items: [
           {
-            to: "/personas",
-            label: "Personas",
-            position: "left",
+            to: "/guide",
+            label: "Guide",
+            position: "right"
           },
           {
             href: "https://greensoftware.foundation/",
-            position: "right",
             label: "Green Software Foundation",
+            position: "right"
           },
         ],
       },
@@ -111,7 +111,7 @@ const config = {
             ],
           },
           {
-            title: "GSF Info",
+            title: "GSF",
             items: [
               {
                 label: "Green Software Foundation",
