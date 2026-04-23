@@ -75,6 +75,11 @@ const config = {
             position: "right"
           },
           {
+            to: "/contribute",
+            label: "Contribute",
+            position: "right"
+          },
+          {
             href: "https://greensoftware.foundation/",
             label: "Green Software Foundation",
             position: "right"
