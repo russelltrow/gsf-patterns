@@ -287,24 +287,6 @@ export default function Contribute(): JSX.Element {
                       published pattern page.
                     </p>
                   </div>
-
-                  <div className={styles.fieldGroup}>
-                    <label className={styles.label} htmlFor="organisation">
-                      Your organisation{' '}
-                      <span className={styles.required} aria-hidden="true">*</span>
-                    </label>
-                    <input
-                      className={styles.input}
-                      type="text"
-                      id="organisation"
-                      name="organisation"
-                      placeholder="e.g. Accenture, Microsoft, independent"
-                      required
-                    />
-                    <p className={styles.helpText}>
-                      We&rsquo;ll include this alongside your name in the pattern attribution.
-                    </p>
-                  </div>
                 </section>
 
                 <div className={styles.submitRow}>
