@@ -33,3 +33,18 @@ export const categories: Category[] = [
 ];
 
 export const categoryMap = new Map<string, Category>(categories.map(c => [c.slug, c]));
+
+export type Subcategory = {
+  label: string;
+  position: number;
+};
+
+export const subcategories: Record<string, Subcategory> = {
+  "system-topology":            { label: "System Topology",          position: 1 },
+  "technology-selection":       { label: "Technology Selection",      position: 2 },
+  "data-handling":              { label: "Data Handling",             position: 1 },
+  "media-and-code-efficiency":  { label: "Media & Code Efficiency",   position: 2 },
+  "web-performance":            { label: "Web Performance",           position: 3 },
+  "capacity-management":        { label: "Capacity Management",       position: 1 },
+  "resource-lifecycle":         { label: "Resource Lifecycle",        position: 2 },
+};

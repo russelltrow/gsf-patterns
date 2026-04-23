@@ -159,6 +159,11 @@ body {
   color: var(--gsf-primary-darker);
 }
 
+.nav-divider {
+  border-top: 1px solid var(--ifm-color-emphasis-300);
+  margin: 0.5rem 0.75rem;
+}
+
 /* ─── Markdown content ─── */
 .markdown {
   margin-top: 20px;

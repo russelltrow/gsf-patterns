@@ -111,10 +111,12 @@ for (const file of allFiles) {
   const description = fm.description || "";
   const category = categoryFromPermalink(permalink);
 
+  const displayTags = tags.filter(t => !t.startsWith("persona:"));
+
   for (const tag of personaTags) {
     const slug = tag.replace("persona:", "");
     if (personaPatterns[slug]) {
-      personaPatterns[slug].push({ title, permalink, description, category });
+      personaPatterns[slug].push({ title, permalink, description, category, tags: displayTags });
     }
   }
 }
@@ -137,6 +139,7 @@ const lines = [
   "  permalink: string;",
   "  description: string;",
   "  category: string;",
+  "  tags: string[];",
   "};",
   "",
   "export type Persona = {",
@@ -157,7 +160,7 @@ for (const def of PERSONA_DEFS) {
   lines.push(`    description: ${JSON.stringify(def.description)},`);
   lines.push(`    patterns: [`);
   for (const p of patterns) {
-    lines.push(`      { title: ${JSON.stringify(p.title)}, permalink: ${JSON.stringify(p.permalink)}, description: ${JSON.stringify(p.description)}, category: ${JSON.stringify(p.category)} },`);
+    lines.push(`      { title: ${JSON.stringify(p.title)}, permalink: ${JSON.stringify(p.permalink)}, description: ${JSON.stringify(p.description)}, category: ${JSON.stringify(p.category)}, tags: ${JSON.stringify(p.tags)} },`);
   }
   lines.push(`    ],`);
   lines.push(`  },`);
