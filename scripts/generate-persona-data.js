@@ -7,7 +7,9 @@
 const fs = require("fs");
 const path = require("path");
 
-const DOCS_CATALOG = path.join(__dirname, "../docs/catalog");
+const PATTERN_DIRS = ["requirements", "architecture", "development", "operations"].map(
+  c => path.join(__dirname, "../docs", c)
+);
 const OUT_FILE = path.join(__dirname, "../src/data/personas.ts");
 
 // ── Persona definitions ─────────────────────────────────────────────────────
@@ -65,10 +67,9 @@ function filePathToPermalink(absPath) {
 }
 
 function categoryFromPermalink(permalink) {
-  // /catalog/architecture/... → Architecture
   const parts = permalink.split("/").filter(Boolean);
-  if (parts[0] === "catalog" && parts[1]) {
-    return parts[1].charAt(0).toUpperCase() + parts[1].slice(1);
+  if (parts[0]) {
+    return parts[0].charAt(0).toUpperCase() + parts[0].slice(1);
   }
   return "Other";
 }
@@ -89,7 +90,7 @@ function walkDir(dir, files = []) {
   return files;
 }
 
-const allFiles = walkDir(DOCS_CATALOG);
+const allFiles = PATTERN_DIRS.flatMap(dir => walkDir(dir));
 
 // Build per-persona pattern lists
 const personaPatterns = {};
