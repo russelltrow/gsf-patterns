@@ -69,71 +69,33 @@ export default function Contribute(): JSX.Element {
                       className={styles.textarea}
                       id="problem-statement"
                       name="problem-statement"
-                      rows={4}
-                      placeholder="Describe the situation or behaviour in software development that leads to unnecessary emissions."
+                      rows={5}
+                      placeholder="Describe the situation or behaviour in software development that leads to unnecessary emissions. What does the problem look like in practice? Why does it matter?"
                       required
                     />
                     <p className={styles.helpText}>
-                      Be as specific as you can. What does the problem look like in practice? Who
-                      experiences it?
+                      This becomes the core of the pattern description. The more context you can
+                      give, the better the pattern we can produce.
                     </p>
                   </div>
 
                   <div className={styles.fieldGroup}>
-                    <label className={styles.label} htmlFor="why-it-matters">
-                      Why is this important for green software?{' '}
+                    <label className={styles.label} htmlFor="solution-impact">
+                      How does this solve the problem and reduce emissions?{' '}
                       <span className={styles.required} aria-hidden="true">*</span>
                     </label>
                     <textarea
                       className={styles.textarea}
-                      id="why-it-matters"
-                      name="why-it-matters"
-                      rows={4}
-                      placeholder="Explain the significance of this problem and the opportunity to reduce emissions if it's solved."
+                      id="solution-impact"
+                      name="solution-impact"
+                      rows={5}
+                      placeholder="Describe one or more approaches that address the problem. How do you expect this to reduce energy consumption, carbon intensity, or hardware demand?"
                       required
                     />
                     <p className={styles.helpText}>
-                      This helps us prioritise and communicate the value of the pattern to the
-                      community.
-                    </p>
-                  </div>
-
-                  <div className={styles.fieldGroup}>
-                    <label className={styles.label} htmlFor="potential-solutions">
-                      What approaches could solve this problem?{' '}
-                      <span className={styles.required} aria-hidden="true">*</span>
-                    </label>
-                    <textarea
-                      className={styles.textarea}
-                      id="potential-solutions"
-                      name="potential-solutions"
-                      rows={4}
-                      placeholder="Describe one or more techniques, strategies, or changes in practice that could address the problem."
-                      required
-                    />
-                    <p className={styles.helpText}>
-                      You don&rsquo;t need a complete solution &mdash; share what you know or have
-                      seen work. Even a rough direction is helpful.
-                    </p>
-                  </div>
-
-                  <div className={styles.fieldGroup}>
-                    <label className={styles.label} htmlFor="emission-impact">
-                      How do you expect this to reduce software emissions?{' '}
-                      <span className={styles.required} aria-hidden="true">*</span>
-                    </label>
-                    <textarea
-                      className={styles.textarea}
-                      id="emission-impact"
-                      name="emission-impact"
-                      rows={3}
-                      placeholder='e.g. "Reducing unnecessary compute cycles lowers energy consumption, which reduces the carbon intensity of the software."'
-                      required
-                    />
-                    <p className={styles.helpText}>
-                      Think about which part of the Software Carbon Intensity (SCI) equation this
-                      affects &mdash; energy (E), hardware (M), or carbon intensity (I). If
-                      you&rsquo;re not sure, just describe the impact in plain language.
+                      You don&rsquo;t need a complete or technically precise answer &mdash; share
+                      what you know or have seen work. The direction of impact matters more than
+                      exact measurements.
                     </p>
                   </div>
 
@@ -246,27 +208,7 @@ export default function Contribute(): JSX.Element {
                       required
                     />
                     <p className={styles.helpText}>
-                      We&rsquo;ll only use this to contact you about your submission.
-                    </p>
-                  </div>
-
-                  <div className={styles.fieldGroup}>
-                    <label className={styles.label} htmlFor="github-username">
-                      Your GitHub username{' '}
-                      <span className={styles.required} aria-hidden="true">*</span>
-                    </label>
-                    <input
-                      className={styles.input}
-                      type="text"
-                      id="github-username"
-                      name="github-username"
-                      placeholder="e.g. russelltrow"
-                      required
-                    />
-                    <p className={styles.helpText}>
-                      We use GitHub to manage the pattern review process. We&rsquo;ll tag you when
-                      your submission is under review so you can follow along and contribute to the
-                      discussion.
+                      We&rsquo;ll use this to contact you about your submission.
                     </p>
                   </div>
 
@@ -287,6 +229,42 @@ export default function Contribute(): JSX.Element {
                       published pattern page.
                     </p>
                   </div>
+
+                  <div className={styles.fieldGroup}>
+                    <label className={styles.label} htmlFor="github-username">
+                      Your GitHub username{' '}
+                      <span className={styles.optional}>Optional</span>
+                    </label>
+                    <input
+                      className={styles.input}
+                      type="text"
+                      id="github-username"
+                      name="github-username"
+                      placeholder="e.g. russelltrow"
+                    />
+                    <p className={styles.helpText}>
+                      If you have one, we&rsquo;ll tag you in the review process on the patterns
+                      repository.
+                    </p>
+                  </div>
+
+                  <div className={styles.fieldGroup}>
+                    <label className={styles.label} htmlFor="organisation">
+                      Your organisation{' '}
+                      <span className={styles.required} aria-hidden="true">*</span>
+                    </label>
+                    <input
+                      className={styles.input}
+                      type="text"
+                      id="organisation"
+                      name="organisation"
+                      placeholder="e.g. Accenture, Microsoft, independent"
+                      required
+                    />
+                    <p className={styles.helpText}>
+                      We&rsquo;ll include this alongside your name in the pattern attribution.
+                    </p>
+                  </div>
                 </section>
 
                 <div className={styles.submitRow}>
@@ -303,8 +281,7 @@ export default function Contribute(): JSX.Element {
               </h2>
               <p className={styles.confirmationText}>
                 Our team will review your idea and develop it into a full pattern draft. We&rsquo;ll
-                tag you on GitHub when it moves into review so you can follow the progress and
-                contribute to the discussion.
+                be in touch by email to let you know when it moves into review.
               </p>
               <p className={styles.confirmationText}>
                 In the meantime, you can explore the current pattern catalogue at the link below.
