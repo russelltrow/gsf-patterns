@@ -76,7 +76,7 @@ const config = {
           },
           {
             to: "/contribute",
-            label: "Contribute",
+            label: "Propose a Pattern",
             position: "right"
           },
           {
