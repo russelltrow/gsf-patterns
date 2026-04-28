@@ -7,7 +7,7 @@ displayed_sidebar: tutorialSidebar
 
 ## What is a Green Software Pattern?
 
-A green software pattern if applied correctly will reduce the emissions of your software. Every pattern in the database contains these sections:
+Each pattern, applied correctly, reduces your software's emissions. Every pattern in the database contains these sections:
 
 **Metadata**
 * **Version**: Designation of iteration on the pattern. This will initially be assigned by the patterns working group and defaults to 1.0
@@ -18,7 +18,7 @@ A green software pattern if applied correctly will reduce the emissions of your 
 **Pattern Content**
 * **Title**: Title of the pattern. Please follow the naming convention of an `Action` taken on a `Resource`. Example: "Reduce compute requirements"
 * **Description**: A full description of what problem this pattern is solving
-* **Solution**: How will this patter solve the problem
+* **Solution**: How will this pattern solve the problem
 * **SCI Impact**: How will this pattern affect an SCI score of an application and why
 * **Assumptions**: What are the assumptions being made
 * **Considerations**: Discussion section anything that should be taken into consideration when implementing this pattern 
