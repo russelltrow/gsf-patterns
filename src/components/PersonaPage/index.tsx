@@ -44,16 +44,7 @@ export default function PersonaPage({ persona }: Props): JSX.Element {
             <h2 className={styles.categoryHeading}>{category}</h2>
             <div className={styles.patternGrid}>
               {grouped.get(category)!.map((pattern) => (
-                <Link
-                  key={pattern.permalink}
-                  to={pattern.permalink}
-                  className={styles.patternCard}
-                >
-                  <span className={styles.patternTitle}>{pattern.title}</span>
-                  {pattern.description && (
-                    <p className={styles.patternDescription}>{pattern.description}</p>
-                  )}
-                </Link>
+                <PatternCard key={pattern.permalink} pattern={pattern} />
               ))}
             </div>
           </div>
