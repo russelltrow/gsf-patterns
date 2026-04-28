@@ -195,35 +195,35 @@ const successStories = [
   {
     id: "story-1",
     label: "Case Study",
-    organisation: "NTT DATA",
+    title: "Calculating Your Carbon Footprint: Measuring Serverless App Emissions on AWS",
     summary: "Denis Angeletta and Franziska Warncke applied the SCI specification to a serverless campaign management system, calculating 0.305g CO₂ per request — making emissions measurable at scale.",
     href: "https://greensoftware.foundation/articles/calculating-your-carbon-footprint-a-guide-to-measuring-serverless-app-emissions-o/",
   },
   {
     id: "story-2",
     label: "Case Study",
-    organisation: "AVEVA",
+    title: "How to Accurately Measure the Energy Consumption of Application Software",
     summary: "AVEVA developed a methodology to isolate software energy consumption from hardware infrastructure, achieving measurable emissions reductions across their top ten products.",
     href: "https://greensoftware.foundation/articles/how-to-accurately-measure-the-energy-consumption-of-application-software/",
   },
   {
     id: "story-3",
     label: "Member Story",
-    organisation: "GSF Members",
+    title: "Engineers know the theory but not what to change in code",
     summary: "Ten member organisations — including Microsoft, Goldman Sachs, and Accenture — collaborated to build 50 peer-reviewed patterns that give engineers actionable changes to reduce software emissions.",
     href: "https://greensoftware.foundation/stories/green-software-patterns/",
   },
   {
     id: "story-4",
     label: "Research",
-    organisation: "University College London",
+    title: "Automatically Assessing Software Architecture Compliance With Green Software Patterns",
     summary: "UCL researchers built EcoDocSense, a tool that uses LLMs fine-tuned on green software patterns to automatically assess software architecture documents for sustainability compliance.",
     href: "https://solar.cs.ucl.ac.uk/pdf/EcoDocSense_Greens2025.pdf",
   },
   {
     id: "story-5",
     label: "Podcast",
-    organisation: "Environment Variables",
+    title: "Backstage: Green Software Patterns",
     summary: "Patterns project leads Franziska Warncke and Liya Mathew discuss real-world implementations by AVEVA and Mastercard, and the multi-stage review process behind every pattern.",
     href: "https://shows.acast.com/environment-variables/episodes/68dc7cfc7be17a7f013561f3",
   },
@@ -243,7 +243,7 @@ export function SuccessStoriesContent(): JSX.Element {
           <div className={styles.storyCardHeader}>
             <span className={styles.storyLabel}>{story.label}</span>
           </div>
-          <span className={styles.storyOrganisation}>{story.organisation}</span>
+          <span className={styles.storyOrganisation}>{story.title}</span>
           <p className={styles.storyDescription}>{story.summary}</p>
           <span className={styles.storyCardCta}>Read more ↗</span>
         </a>
