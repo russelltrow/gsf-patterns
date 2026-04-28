@@ -194,21 +194,38 @@ export function CategoriesIndexContent(): JSX.Element {
 const successStories = [
   {
     id: "story-1",
-    organisation: "Organisation name",
-    summary: "A short description of how this organisation applied green software patterns and what impact that had on their emissions.",
-    href: "https://greensoftware.foundation/articles/",
+    label: "Case Study",
+    organisation: "NTT DATA",
+    summary: "Denis Angeletta and Franziska Warncke applied the SCI specification to a serverless campaign management system, calculating 0.305g CO₂ per request — making emissions measurable at scale.",
+    href: "https://greensoftware.foundation/articles/calculating-your-carbon-footprint-a-guide-to-measuring-serverless-app-emissions-o/",
   },
   {
     id: "story-2",
-    organisation: "Organisation name",
-    summary: "A short description of how this organisation applied green software patterns and what impact that had on their emissions.",
-    href: "https://greensoftware.foundation/articles/",
+    label: "Case Study",
+    organisation: "AVEVA",
+    summary: "AVEVA developed a methodology to isolate software energy consumption from hardware infrastructure, achieving measurable emissions reductions across their top ten products.",
+    href: "https://greensoftware.foundation/articles/how-to-accurately-measure-the-energy-consumption-of-application-software/",
   },
   {
     id: "story-3",
-    organisation: "Organisation name",
-    summary: "A short description of how this organisation applied green software patterns and what impact that had on their emissions.",
-    href: "https://greensoftware.foundation/articles/",
+    label: "Member Story",
+    organisation: "GSF Members",
+    summary: "Ten member organisations — including Microsoft, Goldman Sachs, and Accenture — collaborated to build 50 peer-reviewed patterns that give engineers actionable changes to reduce software emissions.",
+    href: "https://greensoftware.foundation/stories/green-software-patterns/",
+  },
+  {
+    id: "story-4",
+    label: "Research",
+    organisation: "University College London",
+    summary: "UCL researchers built EcoDocSense, a tool that uses LLMs fine-tuned on green software patterns to automatically assess software architecture documents for sustainability compliance.",
+    href: "https://solar.cs.ucl.ac.uk/pdf/EcoDocSense_Greens2025.pdf",
+  },
+  {
+    id: "story-5",
+    label: "Podcast",
+    organisation: "Environment Variables",
+    summary: "Patterns project leads Franziska Warncke and Liya Mathew discuss real-world implementations by AVEVA and Mastercard, and the multi-stage review process behind every pattern.",
+    href: "https://shows.acast.com/environment-variables/episodes/68dc7cfc7be17a7f013561f3",
   },
 ];
 
@@ -224,7 +241,7 @@ export function SuccessStoriesContent(): JSX.Element {
           rel="noopener noreferrer"
         >
           <div className={styles.storyCardHeader}>
-            <span className={styles.storyLabel}>Case Study</span>
+            <span className={styles.storyLabel}>{story.label}</span>
           </div>
           <span className={styles.storyOrganisation}>{story.organisation}</span>
           <p className={styles.storyDescription}>{story.summary}</p>

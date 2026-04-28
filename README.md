@@ -1,7 +1,7 @@
 # Patterns of Green Software Engineering
 
 ## Scope
-An open-source database of software patterns that, if applied, will reduce software emissions. Each pattern has been thoroughly reviewed by experts and agreed upon by all members of the Foundation. The patterns are the next step in the Foundation's goal to create an ecosystem of people with the knowledge of how to build greener applications. 
+An open-source database of software patterns that, if applied, will reduce software emissions. Each pattern has been thoroughly reviewed by experts and agreed upon by all members of the Foundation. The patterns are the next step in the Foundation's goal to build a trusted ecosystem of people with the knowledge of how to build greener applications. 
 
 For the longest time, the feedback we've received is that people need actionable advice they can apply immediately to their software products. However, the correct choices can change dramatically from one technology to another. For example, a good pattern for an AI product might be a wrong pattern for a web application. The information is out there but hard to find. We need one place where everyone can go for green software patterns regardless of their role or the technology and trust that if they apply the pattern, it will reduce emissions.
 
