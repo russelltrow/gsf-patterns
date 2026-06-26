@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://www.googletagmanager.com">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-G3P4S2WSTC"></script>
 <script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-G3P4S2WSTC",{})</script><link rel="stylesheet" href="/gsf-patterns/assets/css/styles.d0294966.css">
-<script src="/gsf-patterns/assets/js/runtime~main.3fe45eca.js" defer="defer"></script>
+<script src="/gsf-patterns/assets/js/runtime~main.3ededd0c.js" defer="defer"></script>
 <script src="/gsf-patterns/assets/js/main.e1d82d35.js" defer="defer"></script>
 </head>
 <body>
@@ -21,12 +21,13 @@
 <p>Using models that are appropriately sized and architecturally efficient for the task avoids unnecessary resource usage. This includes selecting smaller or task-specific models, choosing energy-efficient architectures at equivalent capability levels, and applying optimization techniques to reduce model footprint without sacrificing required performance.</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="solution">Solution<a href="#solution" class="hash-link" aria-label="Direct link to Solution" title="Direct link to Solution" translate="no">​</a></h2>
 <ul>
+<li class="">Evaluate model options based on task requirements, deployment constraints, and available model catalogs before selecting a model</li>
 <li class="">Select smaller or task-specific models where they provide sufficient performance</li>
 <li class="">Choose base models that provide the required capability with lower compute requirements</li>
 <li class="">Prefer optimized or distilled versions of larger models for fine-tuning and inference</li>
 <li class="">Apply model compression techniques such as quantization, pruning, and knowledge distillation</li>
 <li class="">Remove redundant or inactive parameters where possible</li>
-<li class="">Evaluate model options based on both performance and energy efficiency before selection</li>
+<li class="">Evaluate model options based on performance and energy efficiency using benchmarks representative of the target deployment environment</li>
 <li class="">Continuously evaluate newer model variants that offer improved efficiency</li>
 <li class="">Avoid defaulting to the largest available model when simpler alternatives can achieve similar outcomes</li>
 </ul>
@@ -39,23 +40,23 @@
 <ul>
 <li class=""><strong>Compute costs:</strong> Reduced due to smaller model sizes and faster inference</li>
 <li class=""><strong>Infrastructure costs:</strong> Lower due to reduced memory and storage requirements</li>
-<li class=""><strong>Benchmarking overhead:</strong> May add cost for performance testing across model variants</li>
+<li class=""><strong>Benchmarking and evaluation:</strong> Requires additional effort and cost but is essential for identifying the most efficient model for a given use case</li>
 <li class=""><strong>Trade-off:</strong> Optimization for efficiency may require initial investment in model compression tooling</li>
 </ul>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="assumptions">Assumptions<a href="#assumptions" class="hash-link" aria-label="Direct link to Assumptions" title="Direct link to Assumptions" translate="no">​</a></h2>
 <ul>
 <li class="">Smaller or optimized models can meet the functional requirements of the application</li>
-<li class="">Model performance can be validated against acceptable thresholds</li>
-<li class="">Efficiency improvements do not significantly degrade output quality</li>
+<li class="">Model performance can be validated against application-specific functional and quality thresholds</li>
+<li class="">Efficiency improvements are evaluated against acceptable trade-offs in output quality, accuracy, latency, and cost</li>
 </ul>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="considerations">Considerations<a href="#considerations" class="hash-link" aria-label="Direct link to Considerations" title="Direct link to Considerations" translate="no">​</a></h2>
 <ul>
-<li class="">There is a trade-off between model size, accuracy, and efficiency</li>
-<li class="">Some complex tasks may require larger models</li>
-<li class="">Over-optimization can degrade performance</li>
-<li class="">Fine-tuning larger models may be necessary for complex domain-specific tasks</li>
-<li class="">Periodic re-evaluation is needed as workloads and models evolve</li>
-<li class="">Benchmarking should include both performance and resource usage</li>
+<li class="">Trade-offs between model size, accuracy, latency, and efficiency should be evaluated in the context of task requirements, deployment hardware, data characteristics, preprocessing requirements, and operational constraints</li>
+<li class="">Some complex or domain-specific tasks may still require larger models or fine-tuning</li>
+<li class="">Model suitability depends on task requirements, deployment hardware, data characteristics, preprocessing requirements, and operational constraints</li>
+<li class="">Over-optimization can degrade performance or output quality</li>
+<li class="">Monitoring and periodic re-evaluation introduce overhead and should balance observability benefits with resource consumption</li>
+<li class="">Benchmarking should include both performance and resource usage in representative deployment environments</li>
 </ul>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="references">References<a href="#references" class="hash-link" aria-label="Direct link to References" title="Direct link to References" translate="no">​</a></h2>
 <ul>
