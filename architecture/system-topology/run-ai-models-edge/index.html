@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://www.googletagmanager.com">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-G3P4S2WSTC"></script>
 <script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-G3P4S2WSTC",{})</script><link rel="stylesheet" href="/gsf-patterns/assets/css/styles.d0294966.css">
-<script src="/gsf-patterns/assets/js/runtime~main.7aaadc88.js" defer="defer"></script>
+<script src="/gsf-patterns/assets/js/runtime~main.da0c4a63.js" defer="defer"></script>
 <script src="/gsf-patterns/assets/js/main.e1d82d35.js" defer="defer"></script>
 </head>
 <body>
@@ -22,11 +22,12 @@
 <p>Providers also deploy edge inference capabilities through on-device ML SDKs and embedded models, making this pattern applicable to both roles.</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="solution">Solution<a href="#solution" class="hash-link" aria-label="Direct link to Solution" title="Direct link to Solution" translate="no">​</a></h2>
 <ul>
-<li class="">Deploy models on edge devices or local infrastructure to reduce data transfer to centralized systems</li>
-<li class="">Perform data preprocessing tasks such as filtering, cleansing, and feature generation locally</li>
-<li class="">Use edge inference for real-time or latency-sensitive applications</li>
-<li class="">Limit transmission of raw data by sending only necessary or aggregated results to the cloud</li>
+<li class="">Classify workloads and edge devices based on latency requirements, data volume, compute intensity, memory constraints, and power availability to determine suitable deployment targets</li>
 <li class="">Evaluate hybrid architectures that combine edge and cloud processing based on workload requirements</li>
+<li class="">Deploy models on edge devices or local infrastructure when doing so reduces data transfer, latency, or centralized compute requirements</li>
+<li class="">Perform workload-specific data preprocessing tasks such as filtering, cleansing, aggregation, and feature generation locally</li>
+<li class="">Use edge inference for real-time, high-frequency, or latency-sensitive applications</li>
+<li class="">Limit transmission of raw data by sending only necessary, filtered, or aggregated results to the cloud</li>
 <li class="">For applications using external AI services, consider on-device or local inference options to reduce repeated remote calls</li>
 </ul>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="sci-impact">SCI Impact<a href="#sci-impact" class="hash-link" aria-label="Direct link to SCI Impact" title="Direct link to SCI Impact" translate="no">​</a></h2>
@@ -38,23 +39,22 @@
 <ul>
 <li class=""><strong>Cloud compute costs:</strong> Reduced by moving inference to edge devices</li>
 <li class=""><strong>Network costs:</strong> Lower data transfer to centralized systems</li>
-<li class=""><strong>Edge device costs:</strong> Increased due to deploying hardware at the edge</li>
+<li class=""><strong>Edge device costs:</strong> Hardware choices range from conventional CPUs and GPUs to specialized low-power accelerators and emerging architectures, with different cost, performance, and energy-efficiency trade-offs</li>
 <li class=""><strong>Model management costs:</strong> Higher due to complexity of distributed model updates</li>
 <li class=""><strong>Trade-off:</strong> Cloud cost savings offset by edge device and management overhead</li>
 </ul>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="assumptions">Assumptions<a href="#assumptions" class="hash-link" aria-label="Direct link to Assumptions" title="Direct link to Assumptions" translate="no">​</a></h2>
 <ul>
-<li class="">Edge or local devices have sufficient memory, compute capacity, and power to run the target model without requiring additional optimization</li>
+<li class="">Edge or local devices have sufficient memory, compute capacity, and power to support both workload-specific preprocessing and model execution, potentially using optimized, compressed, or quantized models</li>
 <li class="">Workloads can be partitioned effectively between edge and cloud</li>
 </ul>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="considerations">Considerations<a href="#considerations" class="hash-link" aria-label="Direct link to Considerations" title="Direct link to Considerations" translate="no">​</a></h2>
 <ul>
 <li class="">Embodied emissions of edge devices must be accounted for</li>
-<li class="">Edge environments may have limited compute and storage capacity</li>
+<li class="">Edge environments may have limited compute, storage, connectivity, availability, and responsiveness</li>
 <li class="">Model updates and lifecycle management can be more complex in distributed systems</li>
-<li class="">Not all workloads are suitable for edge deployment</li>
-<li class="">Carbon intensity of edge locations versus cloud regions should be compared</li>
-<li class="">Trade-offs between latency, cost, and carbon should be evaluated</li>
+<li class="">Workload partitioning between edge and cloud should consider latency, energy consumption, network usage, device capabilities, operational constraints, and carbon intensity differences</li>
+<li class="">Not all workloads are suitable for edge deployment; trade-offs between latency, cost, carbon, and operational complexity should be evaluated</li>
 </ul>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="references">References<a href="#references" class="hash-link" aria-label="Direct link to References" title="Direct link to References" translate="no">​</a></h2>
 <ul>
